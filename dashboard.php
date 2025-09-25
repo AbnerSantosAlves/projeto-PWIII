@@ -59,7 +59,7 @@ $(document).ready(function() {
         if (confirm("Tem certeza que deseja apagar o contato ID " + id + "?")) {
             $.ajax({
                 type: 'POST',
-                url: 'cadastrar.php', 
+                url: 'apagar.php', 
                 dataType: 'json', 
                 data: {
                     acao: 'deletar',
@@ -121,7 +121,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: 'cadastrar.php',
+            url: 'editar.php',
             data: formData,
             dataType: 'json', 
             processData: false,
@@ -144,4 +144,5 @@ $(document).ready(function() {
 </script>
 
 </body>
+
 </html>
