@@ -1,0 +1,15 @@
+CREATE DATABASE sistema;
+
+use sistema;
+
+CREATE TABLE tb_contato (
+    cd_contato INT AUTO_INCREMENT PRIMARY KEY,
+    nm_contato VARCHAR(100) NOT NULL,
+    ds_login VARCHAR(50) NOT NULL UNIQUE,
+    ds_senha VARCHAR(255) NOT NULL, -- Armazene senhas HASHED!
+    ds_email VARCHAR(100) NOT NULL UNIQUE,
+    cd_telefone VARCHAR(20),
+    ds_avatar BLOB DEFAULT null
+);
+
+INSERT INTO tb_contato (nm_contato, ds_login, ds_senha, ds_email, cd_telefone) VALUES ('abner', 'admin2', 'abner', 'admin443@teste.com', '1231112121121');
